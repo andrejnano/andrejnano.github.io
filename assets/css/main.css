@@ -87,8 +87,6 @@ h2 { font-size: 26px; }
 
 .huge-text { font-size: 68px; }
 
-body, p, a { font-size: 16px; }
-
 p { line-height: 1.7; }
 
 ::-moz-selection { background: #E74C3C; }
@@ -99,4 +97,19 @@ body { background: #F4F5F4; font-family: "Roboto", sans-serif; }
 
 a { text-decoration: none; }
 
-.button { padding: 0.6em; background-color: #E74C3C; color: #F4F5F4; border-radius: 0.6em; }
+.intro {
+    padding: 1.96em;
+    padding-bottom: 0.3em;
+    font-size: 2em;
+}
+.intro p {
+    font-weight: 400;
+}
+.intro a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 800;
+}
+.intro a:hover {
+    background-color: #E74C3C;
+}
