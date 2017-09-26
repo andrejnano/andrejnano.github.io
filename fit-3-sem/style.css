@@ -125,7 +125,7 @@ section.subject strong {
 section.subject a {
   /*color: #FF404E;*/
   color: #1BA5B8;
-  /*border: 1px solid #ccc;*/
+  font-weight: bold;
   padding: 0 0.2em;
   text-decoration: none;
 }
