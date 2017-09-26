@@ -45,7 +45,7 @@ small, .font_small {font-size: 0.707em;}
 
 #content {
   margin: 0 auto;
-  width: 960px;
+  max-width: 960px;
 }
 
 section#intro {
