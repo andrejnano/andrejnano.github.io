@@ -1,0 +1,8 @@
+﻿pokud budete počítat nelineární rovnici a budete si moci zvolit libovolnou 
+metodu, 
+nepřemýšlejte a berte půlení intervalu nebo regula falsi
+
+ 
+su to metody narocne na neustale zadavanie novych hodnot do kalkulacky, 
+neni 
+vsak potreba nic overovat.
