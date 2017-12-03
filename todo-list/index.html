@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang='sk'>
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> TODO List</title>
+    <link rel='stylesheet' type='text/css' href='css/style.css'>
+</head>
+<body>
+
+    <!-- main page container -->
+    <div class='site' id='site'>
+
+        <!-- header container | logo , page menu , links.. --> 
+        <header class='site-header'>
+
+            <!-- logo -->
+            <h2 class='app-name'>TODO LIST</h2>
+
+            <!-- login container -->
+            <div class='login-area'>
+                <a href='#'>
+                    <i class='fa fa-fw fa-user'></i> username
+                </a>
+
+                <br/>
+
+                <a href="#">Profile</a> | <a href="#" onclick="javascript: logout();" >Logout </a>
+            </div>
+
+
+            <!-- links container --> 
+            <div class='link-area'>
+
+                <!-- task list -->
+                <a href='#' class='action-link' id='todo-list'>
+                    <i class='fa fa-fw fa-tasks'></i>
+                </a>
+
+                <!-- archive -->
+                <a href='#' class='action-link' id='archive'>
+                    <i class='fa fa-fw fa-history'></i>
+                </a>
+
+                <!-- trash -->
+                <!-- <a href='#' class='action-link'>
+                    <i class='fa fa-fw fa-trash-alt'></i>
+                </a> -->
+
+                <!-- settings -->
+                <a href='#' class='action-link'>
+                    <i class='fa fa-fw fa-cogs'></i>
+                </a>
+
+                <!-- help -->
+                <a href='#' class='action-link'>
+                    <i class='fa fa-fw fa-question-circle'></i>
+                </a>
+
+                <!-- github link -->
+                <a href='https://github.com/andrejnano/TODO-LIST' class='github-link'>
+                    our repository
+                    <i class='fab fa-fw fa-github'></i>
+                </a>
+
+            </div>
+
+        </header> 
+
+        <!-- SUBJECT MENU CONTAINER -->
+        <nav class='site-menu'>
+
+            <!-- SUBJECT MENU LIST -->
+            <ul class='menu' id='subjects_filtering'>
+
+                <!-- LIST ITEM -->
+                <li id='all' class='category' style="background: #ffffff; color: #000;">
+                    ALL
+                </li>
+                
+                <li class='category' style="background: #d32f2f;">
+                    IFJ
+                </li>
+                
+                <li class='category' style="background: #e91e63;">
+                    IAL
+                </li>
+
+                <li class='category' style="background: #9c27b0;">
+                    ITU
+                </li>
+
+                <li class='category' style="background: #03a9f4;">
+                    INM
+                </li>
+
+                <li class='category' style="background: #4caf50;">
+                    INP
+                </li>
+
+                <li class='category' style="background: #3f51b5;">
+                    IPS
+                </li>
+
+                <li class='category' style="background:#ffc107;">
+                    IZP
+                </li>
+
+                <li class='category' style="background: #ff5722;">
+                    ISU
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+        <!-- CURRENT LIST DISPLAY CONTAINER -->
+        <main class='site-main'>
+
+			<div class='popup'>
+			       <span>Hi, hide me in css.</span>
+			</div>
+            
+            <!-- CURRENT LIST TO SHOW --> 
+            <ul id="subject_list" class='current-list' >
+
+
+                <!-- LIST ITEM STATIC STRUCTURE --> 
+                <!-- 
+                
+                <li class='list-item' id='border-green'>
+                    
+                    <header class='item-header'>Item name</header>
+                    <div class='item-info'>
+                        Excerpt from item description.
+                    </div>
+                    <button class='item-button' onclick="check">
+                        <i class="fa fa-fw fa-check"></i>
+                    </button>
+                </li>
+
+                <li class='list-item' id='border-purple'>
+                    <header class='item-header'>Item name</header>
+                    <div class='item-info'>
+                        Excerpt from item description.
+                    </div>
+                    <button class='item-button' onclick="check">
+                        <i class="fa fa-fw fa-check"></i>
+                    </button>
+                </li>
+
+                <li class='list-item' id='border-yellow'>
+                    <header class='item-header'>Item name</header>
+                    <div class='item-info'>
+                        Excerpt from item description.
+                    </div>
+                    <button class='item-button' onclick="check">
+                        <i class="fa fa-fw fa-check"></i>
+                    </button>
+                </li>
+
+                <li class='list-item' id='border-red'>
+                    <header class='item-header'>Item name</header>
+                    <div class='item-info'>
+                        Excerpt from item description.
+                    </div>
+                    <button class='item-button' onclick="check">
+                        <i class="fa fa-fw fa-check"></i>
+                    </button>
+                </li>
+
+                <li class='list-item' id='border-blue'>
+                    <header class='item-header'>Item name</header>
+                    <div class='item-info'>
+                        Excerpt from item description.
+                    </div>
+                    <button class='item-button' onclick="check">
+                        <i class="fa fa-fw fa-check"></i>
+                    </button>
+                </li>
+                
+				--> 
+            </ul> <!-- end of .current-list -->
+
+        </main> <!-- end of .site-main -->
+
+
+        <button class='floating-add-button' onclick="show_form()">
+            <i class='fa fa-fw fa-plus'></i>
+        </button>
+
+
+        <!-- INPUT FORM CONTAINER -->
+        <aside class='sidebar-form' id='form'>
+
+            <!-- temporary input form -->
+            <form class='input-form'>
+                
+                <!-- ORDERED LIST OF STEPS TO INPUT -->
+                <ol>
+                    <!-- SUBJECT SELECTION -->
+                    <li>
+                        <label class='input-title' id='subject_label'>
+                            Choose a subject.
+                        </label>
+
+                        <table> <!-- table -->
+                            <tr> <!-- table row -->
+                                <td id='input-form-ifj' bgcolor="#d32f2f" onclick="choose_subject_to_add('input-form-ifj');" style="cursor: pointer;">IFJ</td>
+                                <td id='input-form-ial' bgcolor='#e91e63' onclick="choose_subject_to_add('input-form-ial');" style="cursor: pointer;">IAL</td>
+								<td id='input-form-itu' bgcolor='#9c27b0' onclick="choose_subject_to_add('input-form-itu');" style="cursor: pointer;">ITU</td>
+                                <td id='input-form-inm' bgcolor='#03a9f4' onclick="choose_subject_to_add('input-form-inm');" style="cursor: pointer;">INM</td>
+                            </tr>
+                            <tr>
+								<td id='input-form-inp' bgcolor='#4caf50' onclick="choose_subject_to_add('input-form-inp');" style="cursor: pointer;">INP</td>
+								<td id='input-form-ips' bgcolor='#3f51b5' onclick="choose_subject_to_add('input-form-ips');" style="cursor: pointer;">IPS</td>
+                                <td id='input-form-izp' bgcolor="#ffc107" onclick="choose_subject_to_add('input-form-izp');" style="cursor: pointer;">IZP</td>
+                                <td id='input-form-isu' bgcolor='#ff5722' onclick="choose_subject_to_add('input-form-isu');" style="cursor: pointer;">ISU</td>
+                            </tr>
+                        </table>
+
+                    </li>
+
+                    <!-- TITLE INPUT -->
+                    <li>
+                        <label class='input-title' id='activity_label'>
+                            Name the activity you want to do.
+                        </label>
+                        
+                        <input type='text' name='title' id="activity_info" onchange="set_activity_info();"/>  <!-- short input box -->
+                    </li>
+
+                    <!-- DESCRIPTION INPUT -->
+                    <li>
+                        <label class='input-title' id='info_label'>
+                            Give further information about the task...
+                        </label>
+
+                        <textarea id="further_info" onchange="set_further_info();"></textarea> <!-- big input box -->
+
+                        <button type='button' class="submit" onclick="add_new_task();"> <!-- SUBMIT BUTTON -->
+                            <i class='fa fa-fw fa-plus'></i>
+                        </button>
+                    </li>
+
+                </ol> <!-- end of order list -->
+            
+            </form> <!-- end of form -->
+
+        </aside> <!-- end of .input form CONTAINER -->
+
+    </div> <!-- end of main page container -->
+
+    <!-- JQUERY IMPORT -->
+    <script src="js/jquery.min.js"></script>
+        
+    <!-- js script s ktorym sa pracuje -->
+    <script src="js/main.js"></script>
+
+    <!-- FONT AWESOME ICONS -->
+    <script defer src="js/fontawesome.min.js"></script>
+    <script defer src="js/packs/solid.js"></script>
+    <script defer src="js/packs/brands.js"></script>
+
+</body>
+</html>

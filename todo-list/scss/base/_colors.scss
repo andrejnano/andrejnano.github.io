@@ -1,0 +1,68 @@
+/******************************************************************************
+    COLOR PALLETE
+******************************************************************************/
+
+$primary-color-dark:   #303F9F;
+$primary-color:        #3F51B5;
+$primary-color-light:  #C5CAE9;
+$primary-color-text:   #FFFFFF;
+$accent-color:         #FF5252;
+$primary-text-color:   #212121;
+$secondary-text-color: #757575;
+$divider-color:        #BDBDBD;
+
+
+$bg-gradient: linear-gradient(to right, #12FFF7, #B3FFAB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+//$bg-gradient: linear-gradient(to right, #ff4e50, #f9d423); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+$bg-gradient: linear-gradient(to left, #00d2ff, #3a7bd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+.site {
+    background: $bg-gradient;
+}
+
+
+.site-header {
+    background-color: rgba(0,0,0, 0.8);
+    color: $primary-color-text;
+}
+
+.site-menu {
+    background-color: rgba(0,0,0, 0.6);
+    color: $primary-color-text;
+}
+
+.site-main {
+    background-color: rgba(0,0,0, 0.4);
+    color: $primary-color-text;
+}
+
+.sidebar-form {
+    background-color: rgba(0,0,0, 0.2);
+    color: $primary-color-text;
+}
+
+
+
+$white: #fff;
+$green: #4caf50;
+$purple: #9c27b0;
+$yellow: #ffa726;
+$blue: #3f51b5;
+$red: #f44336;
+$pink: #e91e63;
+
+        #white  { background: $white; color: #222;}
+        #green  { background: $green; color: #fff;}
+        #purple { background: $purple; color: #fff;}
+        #yellow { background: $yellow; color: #fff;}
+        #blue   { background: $blue; color: #fff;}
+        #red    { background: $red; color: #fff;}
+        #pink   { background: $pink; color: #fff;}
+
+        #border-green {border-color: $green;}
+        #border-purple {border-color: $purple;}
+        #border-yellow {border-color: $yellow;}
+        #border-red {border-color: $red;}
+        #border-pink {border-color: $pink;}
+        #border-blue {border-color: $blue;}

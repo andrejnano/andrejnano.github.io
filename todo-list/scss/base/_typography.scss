@@ -1,0 +1,35 @@
+
+/******************************************************************************
+    TYPOGRAPHY DEFAULTS
+******************************************************************************/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Source+Sans+Pro|Ubuntu');
+
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-size: 1rem;
+    line-height: 1.45;
+    font-family: 'Roboto', 'Open Sans', 'Helvetica', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  margin: 0.5em 0;
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 3.157rem;
+}
+
+h2 {
+    font-size: 2.369rem;
+}
+
+h3 {
+    font-size: 1.333rem;
+}

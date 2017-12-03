@@ -1,0 +1,182 @@
+
+/******************************************************************************
+    STRUCTURE
+******************************************************************************/
+
+
+
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+
+
+/******************************************************************************
+    PHONE
+******************************************************************************/
+
+@include for-phone-only {
+    
+    .site {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .site-header {
+        height: 70px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .site-menu {
+        height: auto;
+    }
+
+    .site-main {
+        min-height: 90vh;
+        width: 100%;
+    }
+
+    .sidebar-form {
+        display: none;
+    }
+
+    .floating-add-button {
+        display: inline-block;
+        position: fixed;
+        bottom: 1.6rem;
+        right: 1rem;
+    }
+
+    .close-form-button {
+        display: inline-block;
+        position: fixed;
+        z-index: 20;
+        top: 140px;
+        right: 1rem;
+    }
+
+}
+
+/******************************************************************************
+    max 1199x
+******************************************************************************/
+
+@media (min-width: 600px) and (max-width: 1199px){
+
+    .site {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .site-header {
+        height: 70px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .site-menu {
+        height: auto;
+    }
+    
+    .site-main {
+        min-height: 90vh;
+        width: 100%;
+    }
+
+    .sidebar-form {
+        display: none;
+    }
+
+    .floating-add-button {
+        display: inline-block;
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+    }
+
+    .close-form-button {
+        display: inline-block;
+        position: fixed;
+        z-index: 20;
+        top: 140px;
+        right: 1rem;
+    }
+
+}
+
+/******************************************************************************
+    TABLET LANDSCAPE VIEWPORT  min 900px
+******************************************************************************/
+
+@media (min-width: 1200px)  {
+    
+    .site {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-auto-rows: auto;
+    }
+
+    .site-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        grid-column: 1 / 2;
+        width: auto;
+        height: 100vh;   
+        overflow: hidden; 
+    }
+
+
+    .site-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        grid-column: 2 / 4;
+        width: auto;
+        height: 100vh;
+        overflow:hidden;
+    }
+
+    .site-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        grid-column: 4 / 8;
+        width: auto;
+        height: 100vh;
+        overflow: auto;
+    }
+
+    .sidebar-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        grid-column: 8 / 13;
+        width: auto;
+        height: 100vh;
+        overflow:hidden;
+    }
+
+    .floating-add-button {
+        display: none;
+    }
+
+    .close-form-button {
+        display: none;
+    }
+}

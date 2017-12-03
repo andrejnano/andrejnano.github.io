@@ -1,0 +1,19 @@
+/******************************************************************************
+    GENERAL
+******************************************************************************/
+
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    color: #fff;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-font-smoothing: antialiased !important;
+    text-rendering: optimizelegibility !important;
+}

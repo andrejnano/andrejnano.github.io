@@ -1,0 +1,184 @@
+
+@include for-phone-only {
+    
+    .site-header {
+        position: fixed;
+        width: 100%;
+        z-index: 20;
+        top: 0;
+        left: 0;
+        align-items: center;
+        justify-content: space-between;
+        .app-name {
+            margin: 0 0.8rem 0 0.6rem;
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.2rem;
+            font-weight: 800;
+        }
+
+        .login-area {
+            display: none;
+        }
+
+        .link-area {
+            line-height: 1.4rem;
+
+            .action-link {
+                color: #fff;
+                font-size: 1.4rem; 
+                margin: 0 0.6rem;
+                text-decoration: none;
+            }
+            .action-link:hover {
+                opacity: 0.7;
+            }
+
+            .github-link {
+                display: none;
+            }
+        }  
+    }
+}
+
+
+@media (min-width: 600px) and (max-width: 1199px) {
+    
+    .site-header {
+        position: fixed;
+        width: 100%;
+        z-index: 20;
+        top: 0;
+        left: 0;
+        align-items: center;
+        justify-content: space-between;
+        .app-name {
+            margin: 0 2rem;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .login-area {
+            display: none;
+        }
+
+        .link-area {
+            
+            .action-link {
+                color: #fff;
+                font-size: 1.6rem;
+                margin: 0 1rem;
+                text-decoration: none;
+            }
+            .action-link:hover {
+                opacity: 0.7;
+            }
+
+            .github-link {
+                display: none;
+            }
+        }        
+    }
+}
+
+
+
+@include for-desktop-up { 
+
+    .site-header {
+        align-items: center;
+
+        .app-name {
+            position: absolute;
+            font-size: 1.2rem;
+            word-wrap:break-word;
+            margin: 0;
+            font-weight: bold;
+            top: 1rem;
+        }
+
+        .login-area {
+            display: block;
+            text-align: center;
+            position: absolute;
+            top: 3rem;
+            a {
+                color: #fff;
+                font-size: 0.8rem;
+                text-decoration: none;
+            }
+        }
+
+        .link-area {
+            position: absolute;
+            bottom: 0.5rem;
+            text-align: center;
+            
+            .action-link {
+                color: #fff;
+                display: block;
+                width: 100%;
+                font-size: 2rem;
+                margin: 1rem 0;
+            }
+            .action-link:hover {
+                opacity: 0.7;
+            }
+
+            .github-link {
+                font-size: 0.6rem;
+                display: block;
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+
+        
+    }
+}
+
+@include for-big-desktop-up {
+    
+    .site-header {
+        .app-name {
+            font-size: 1.6rem;
+            top: 2rem;
+        }
+
+        .login-area {
+            display: block;
+            text-align: center;
+            position: absolute;
+            top: 5rem;
+            a {
+                color: #fff;
+                font-size: 1rem;
+                text-decoration: none;
+            }
+        }
+
+        .link-area {
+            position: absolute;
+            bottom: 1rem;
+            text-align: center;
+            
+            .action-link {
+                color: #fff;
+                display: block;
+                width: 100%;
+                font-size: 2rem;
+                margin: 1rem 0;
+            }
+            .action-link:hover {
+                opacity: 0.7;
+            }
+
+            .github-link {
+                font-size: 1rem;
+            }
+        }
+
+        
+    }
+}
