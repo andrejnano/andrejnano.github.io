@@ -1,0 +1,40 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #222;
+    padding: 1rem 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    padding: 0.5rem 1rem;
+}
+
+.navigation a:hover {
+    opacity: 0.5;
+}
+
+.container {
+    width: 80vw;
+    overflow: auto;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+}
