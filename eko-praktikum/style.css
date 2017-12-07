@@ -33,8 +33,23 @@ body {
 }
 
 .container {
-    width: 80vw;
+    max-width: 960px;
     overflow: auto;
     margin: 0 auto;
     border: 1px solid #ccc;
+}
+
+.container figure {
+    margin: 4rem 0;
+    border-bottom: 3px solid #ccc;
+}
+
+.container figure img {
+    width: 70%;
+}
+
+.container figure h2 {
+    text-align: right;
+    margin: 0 2rem;
+    color: #666;
 }
