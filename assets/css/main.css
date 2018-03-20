@@ -7,8 +7,6 @@ html, body {
   margin: 0;
   padding: 0;
   font-size: 1em;
-  height: 100%;
-  overflow: hidden;
 }
 
 body {
@@ -18,10 +16,9 @@ body {
     -moz-animation: gradient_move 34s ease infinite;
     animation: gradient_move 34s ease infinite;
     color: #F0F0F0;
-    font-family: 'Montserrat', 'Ubuntu','Helvetica', sans-serif;
+    font-family: 'Ubuntu', 'Roboto', 'Helvetica', sans-serif;
     font-weight: 400;
     line-height: 1.6;
-    height: 100%;
 }
 
 a { text-decoration: none; }
@@ -31,12 +28,32 @@ main {
 }
 
 section#box {
-    max-width: 960px;
     font-size: 2rem;
     padding: 4rem;
 }
 section#box p {
     font-weight: 400;
+}
+
+.likes {
+    display: inline-block;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-width: 900px;
+}
+
+.likes li {
+    margin: 0.4rem 0;
+    padding: 0;
+    float: left;
+    margin-right: 0.5em;
+    line-height: 1em;
+    
+    padding: 0 0.2em;
+    color: #000;
+    background: #fff;
+    font-weight: bold;
 }
 
 section#box a {
@@ -74,9 +91,10 @@ animation: gradient_move 10s ease infinite;
 @media only screen and (max-width: 400px)
 {
 
-    section#box a.hl {
-        background-color: #F16233;
-    }
+    section#box {
+        font-size: 1.2rem;
+    padding: 1rem;
+}
 }
 
 
